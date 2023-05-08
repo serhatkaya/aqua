@@ -7,6 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: self-hosted
+    environment: dep
 
     steps:
       - name: Checkout repository
@@ -21,6 +22,21 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install
+
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1.3
+        with:
+          GITHUB: ${{ secrets.GITHUB }}
+          LINKEDIN: ${{ secrets.LINKEDIN }}
+          MEDIUM_USER: ${{ secrets.MEDIUM_USER }}
+          TITLE_PREFIX: ${{ secrets.TITLE_PREFIX }}
+          URL: ${{ secrets.URL }}
+          EMAIL: ${{ secrets.EMAIL }}
+          SECONDARY_EMAIL: ${{ secrets.SECONDARY_EMAIL }}
+          META_DESC: ${{ secrets.META_DESC }}
+          directory: "."
+          file_name: .env
+          fail_on_empty: false
       - name: Generate static files
         uses: borales/actions-yarn@v4
         with:
