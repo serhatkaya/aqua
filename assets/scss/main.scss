@@ -109,7 +109,6 @@ header {
 }
 .terminal-card {
   border-radius: 0.75rem;
-  width: calc(100% / 3 - 20px);
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -166,5 +165,17 @@ header {
     margin: 0 auto;
     margin-bottom: 16px;
     width: calc(100% - 20px);
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .terminal-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .terminal-card {
+    width: calc(100% / 3 - 20px);
   }
 }
