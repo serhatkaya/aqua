@@ -17,10 +17,11 @@ jobs:
 
       - name: connect to the server
         uses: appleboy/ssh-action@master
-        with:
+        env:
           host: 57.128.170.161
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
           script: |
             cd /home/ubuntu/projects/aqua
             git pull origin main
