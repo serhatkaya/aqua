@@ -56,7 +56,6 @@ export default {
       sass: {
         implementation: require("sass"),
         sassOptions: {
-          fiber: require("fibers"),
           indentedSyntax: true, // For sass indented syntax
         },
       },
