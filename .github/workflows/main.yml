@@ -23,20 +23,18 @@ jobs:
         with:
           cmd: install
 
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          GITHUB: ${{ secrets.GITHUB }}
-          LINKEDIN: ${{ secrets.LINKEDIN }}
-          MEDIUM_USER: ${{ secrets.MEDIUM_USER }}
-          TITLE_PREFIX: ${{ secrets.TITLE_PREFIX }}
-          URL: ${{ secrets.URL }}
-          EMAIL: ${{ secrets.EMAIL }}
-          SECONDARY_EMAIL: ${{ secrets.SECONDARY_EMAIL }}
-          META_DESC: ${{ secrets.META_DESC }}
-          directory: "."
-          file_name: .env
-          fail_on_empty: false
+      - name: Make .env file
+        run: |
+          touch .env
+          echo "GITHUB=${{ secrets.GITHUB }}" >> .env
+          echo "LINKEDIN=${{ secrets.LINKEDIN }}" >> .env
+          echo "MEDIUM_USER=${{ secrets.MEDIUM_USER }}" >> .env
+          echo "TITLE_PREFIX=${{ secrets.TITLE_PREFIX }}" >> .env
+          echo "URL=${{ secrets.URL }}" >> .env
+          echo "EMAIL=${{ secrets.EMAIL }}" >> .env
+          echo "SECONDARY_EMAIL=${{ secrets.SECONDARY_EMAIL }}" >> .env
+          echo "META_DESC=${{ secrets.META_DESC }}" >> .env
+
       - name: Generate static files
         uses: borales/actions-yarn@v4
         with:
