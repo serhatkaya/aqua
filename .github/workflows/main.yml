@@ -43,4 +43,4 @@ jobs:
           cmd: generate # will run `yarn build:prod` command
 
       - name: Move files
-        run: mv dist/* /var/www/serhatkaya.comtr
+        run: mv dist/* /var/www/skaya.com.tr
