@@ -2,7 +2,7 @@ name: deploy to ovh
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -22,7 +22,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/projects/aqua
-            git pull origin master
+            git pull origin main
             yarn
             yarn generate
             sudo cp -R dist/* /var/www/serhatkaya.com.tr/*
