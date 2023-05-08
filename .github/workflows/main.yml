@@ -12,8 +12,8 @@ jobs:
       - name: pull
         uses: actions/checkout@v2
 
-      - name: ssh settings
-        run: mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      # - name: ssh settings
+      #   run: mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
 
       - name: connect to the server
         uses: appleboy/ssh-action@master
