@@ -1,30 +1,27 @@
-name: deploy to ovh
+name: Build and Deploy
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: self-hosted
-    environment: dep
+
     steps:
-      - name: pull
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      # - name: ssh settings
-      #   run: mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
-
-      - name: connect to the server
-        uses: appleboy/ssh-action@master
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          host: ${{ secrets.HOST }}
-          username: ubuntu
-          port: 22
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /home/ubuntu/projects/aqua
-            git pull origin main
-            yarn
-            yarn generate
-            sudo cp -R dist/* /var/www/serhatkaya.com.tr/*
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run generate
+
+      - name: Move build files
+        run: mv dist/* /var/www/serhatkaya.comtr
