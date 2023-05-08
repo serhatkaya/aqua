@@ -1,0 +1,29 @@
+name: deploy to ovh
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: pull
+        uses: actions/checkout@v2
+
+      - name: ssh settings
+        run: mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+
+      - name: connect to the server
+        uses: appleboy/ssh-action@master
+        with:
+          host: 57.128.170.161
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/ubuntu/projects/aqua
+            git pull origin master
+            yarn
+            yarn generate
+            sudo cp -R dist/* /var/www/serhatkaya.com.tr/*
