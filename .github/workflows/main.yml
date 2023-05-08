@@ -17,11 +17,14 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      - name: Generate static files
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: generate # will run `yarn build:prod` command
 
-      - name: Build project
-        run: npm run generate
-
-      - name: Move build files
+      - name: Move files
         run: mv dist/* /var/www/serhatkaya.comtr
