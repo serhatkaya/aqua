@@ -42,5 +42,5 @@ jobs:
 
       - name: Move files
         run: |
-          rm -rf /var/www/skaya.com.tr/*
-          mv dist/* /var/www/skaya.com.tr
+          rm -rf /www/wwwroot/serhatkaya.com.tr/*
+          mv dist/* /www/wwwroot/serhatkaya.com.tr
