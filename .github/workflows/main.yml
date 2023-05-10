@@ -43,4 +43,4 @@ jobs:
       - name: Move files
         run: |
           rm -rf /www/wwwroot/serhatkaya.com.tr/*
-          mv dist/* /www/wwwroot/serhatkaya.com.tr
+          mv dist/* /www/wwwroot/serhatkaya.com.tr/
