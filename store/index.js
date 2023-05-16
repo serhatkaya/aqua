@@ -25,6 +25,31 @@ export const state = () => {
         thumbnail:
           "https://user-images.githubusercontent.com/59228830/184989231-3732cefe-9d21-4184-999c-1b9fdb925a86.png",
       },
+      {
+        name: "terminal-portfolio",
+        desc: `Introducing the macOS Themed Terminal Portfolio: an elegant and functional showcase for your skills and projects. With a draggable terminal, animated dock, and available commands, it offers a seamless and interactive experience. Built using jQuery, jQuery UI, and Bootstrap for a responsive design. Present your work with style and sophistication.`,
+        url: "https://github.com/serhatkaya/terminal-portfolio",
+        thumbnail:
+          "https://github.com/serhatkaya/terminal-portfolio/raw/master/docs/terminal-port.png?raw=true",
+      },
+      {
+        name: "Checklist",
+        desc: "A checklist application built with Angular and .NET Core. This powerful tool enables you to manage checklists, tags, and categories seamlessly. With a secure API and authentication, stay organized and keep track of your tasks effectively. Simplify your task management process with this efficient Angular and .NET Core application.",
+        url: "https://github.com/serhatkaya/checklist",
+        thumbnail:
+          "https://github.com/serhatkaya/checklist/assets/59228830/5cd35f1f-e897-4a76-a1ac-cf369d7bb4ac",
+      },
+      {
+        name: "UYAP Bulk File Downloader",
+        thumbnail:
+          "https://lh3.googleusercontent.com/k1byu6_ChZdQLBPJ6B5G62SUoVPzqQxa-bD69tSKnuh7i4cQPk_sQR4pJS8axTI_8IyTApdgW1SpvsJKgmh1PQAd=w640-h400-e365-rj-sc0x00ffffff",
+        url: "https://chrome.google.com/webstore/detail/uyap-toplu-dosya-i%CC%87ndirme/mjmdilnnoalnalgkicimdldkkekjfdpm?hl=tr",
+        desc: `UYAP Bulk File Downloader is a convenient tool designed for quickly and easily downloading bulk files related to a selected legal case. Say goodbye to the hassle of downloading individual files one by one.
+
+        This browser extension offers a user-friendly and intuitive interface, eliminating the need for any technical expertise. Simply select your case and effortlessly download all desired files in one go.
+        
+        The UYAP Bulk File Downloader plugin provides a time-saving solution for lawyers, legal assistants, and anyone using the UYAP system. It streamlines the file retrieval process, allowing you to focus on your legal work efficiently.`,
+      },
     ],
   };
 };
