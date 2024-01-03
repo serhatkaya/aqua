@@ -26,5 +26,6 @@ export default {
     posts: Array,
   },
   methods: {},
+  created() {},
 };
 </script>

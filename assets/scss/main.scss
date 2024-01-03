@@ -105,11 +105,13 @@ header {
 .blog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 16px;
+  row-gap: 16px;
 }
 .terminal-card {
   border-radius: 0.75rem;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -142,7 +144,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 180px;
+  // height: 180px;
 }
 .terminal-card .card-body h2 {
   font-size: 1.2rem;

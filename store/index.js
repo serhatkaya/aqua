@@ -47,8 +47,29 @@ export const state = () => {
         desc: `UYAP Bulk File Downloader is a convenient tool designed for quickly and easily downloading bulk files related to a selected legal case. Say goodbye to the hassle of downloading individual files one by one.
 
         This browser extension offers a user-friendly and intuitive interface, eliminating the need for any technical expertise. Simply select your case and effortlessly download all desired files in one go.
-        
+
         The UYAP Bulk File Downloader plugin provides a time-saving solution for lawyers, legal assistants, and anyone using the UYAP system. It streamlines the file retrieval process, allowing you to focus on your legal work efficiently.`,
+      },
+      {
+        name: "Virtus UI",
+        thumbnail:
+          "https://raw.githubusercontent.com/serhatkaya/virtus-ui/master/projects/virtus-docs/src/assets/logo.svg",
+        url: "https://github.com/serhatkaya/virtus-ui",
+        desc: "A pure Angular component library designed with speed, ease of use, and flexibility in mind. Leveraging only Angular's native capabilities, this library ensures seamless integration without the need for external dependencies.",
+      },
+      {
+        name: "Markdown Wizard",
+        url: "https://github.com/serhatkaya/markdown-wizard",
+        desc: "MarkdownWizard a powerful library for creating Markdown documents programmatically.",
+        thumbnail:
+          "https://github.com/serhatkaya/markdown-wizard/assets/59228830/c24bf1a7-c998-4d00-973c-5a6c97230328",
+      },
+      {
+        name: "Twig Formatter",
+        url: "https://github.com/serhatkaya/vscode-twig-formatter",
+        desc: "A code formatter for Twig Template Engine files.",
+        thumbnail:
+          "https://serhatkaya.gallerycdn.vsassets.io/extensions/serhatkaya/twig-formatter/1.0.0/1688843030801/Microsoft.VisualStudio.Services.Icons.Default",
       },
     ],
   };
